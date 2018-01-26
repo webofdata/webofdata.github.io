@@ -1,2 +1,0 @@
-# webofdata.github.io
-Website
