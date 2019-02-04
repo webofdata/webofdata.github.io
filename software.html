@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Web of Data - Software</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/one-page-wonder.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Web of Data</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Specification</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="software.html">Software</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Blog</a>
+            </li>
+            <!-- li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li -->
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="masthead text-center text-white" style="height:200px">
+      <div class="masthead-content">
+        <div class="container">
+          <h1 class="masthead-heading mb-0">Software</h1>
+        </div>
+      </div>
+    </header>
+
+    <section>
+      <div class="container">
+        <div class="row">        
+          <div class="col-lg-12">
+            <div class="p-5">
+              <h2 class="display-4">WoD Server</h2>
+              <p>The reference implementation of the WoD specification is an open source (MIT License), production ready, standalone server. It can be built from source (link coming soon) or run as a docker container. It implements the <a href="swagger/index.html">service API</a> and server side semantics.</p>            
+              <h5>Get started now!</h5>
+              <p>To start a WoD node server as a docker container run the following docker command:</p>
+              <pre>
+      docker run --name wod-node1 -p 8888:8888 webofdata/node
+              </pre>
+              <p>The to test its running:</p>
+              <pre>
+                curl http://localhost:8888/info
+              </pre>
+              <pre>
+                curl http://localhost:8888/stores
+              </pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- section>
+      <div class="container">
+        <div class="row">        
+          <div class="col-lg-12">
+            <div class="p-5">
+              <h2 class="display-4">WoD Comformance Suite</h2>
+              <p>The WoD conformance suite is a stand alone application that can be run against any endpoint to determine if it is compliant with the specification. WoD endpoints can choose to implement subsets of the protocol, e.g. just read and query, and not update. The conformance suite tests these different aspects to report on the conformance of the parts that are implmented. A useful WoD service does not need to expose all service operations to be useful.</p>
+
+              <p>The conformance test suite can be downloaded and run as a docker container:
+              <pre>
+      docker run -r --name wod-node1 -p 9942:9942 webofdata/node
+              </pre>
+              <p>For more information on usage and start up options visit the <a href="">project page</a>.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section -->
+
+    <section>
+      <div class="container">
+        <div class="row">        
+          <div class="col-lg-12">
+            <div class="p-5">
+              <h2 class="display-4">WoD Client SDK</h2>
+              <p>The client SDKs provide language specific libraries for communicating with a WoD service endpoint. These clients also provide implementations of the syncronisation features of the protocol.</p>
+              <p>The following client SDKs are available. See the individual project pages for how to install and use them.</p>
+              <ul>
+                <li><a href="https://github.com/webofdata/wod-dotnet-core-client-sdk">SharpWoD</a> - C# (dotnet core) client library implementation. v0.8</li>
+                <li><a href="https://github.com/webofdata/wod-typescript-client-sdk">JsWoD</a>    - Javascript/Typescript client library implementation. v0.8</li>
+
+                <li>GoWoD    - Go client library implementation - help needed</li>
+                <li>JWoD     - Java client library implementation - help needed</li>
+                <li>PyWoD    - Python client library implementation - help needed</li>
+              </ul> 
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="row">        
+          <div class="col-lg-12">
+            <div class="p-5">
+              <h2 class="display-4">WoD Browser</h2>
+              <p>A generic web application for interacting with the web of data.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="row">        
+          <div class="col-lg-12">
+            <div class="p-5">
+              <h2 class="display-4">WoD Layers</h2>
+              <p>WoD layers are implementations of the specification that expose an existing technology, application, database or API as WoD compliant service endpoints. These implementations often provide a subset of the protocol (i.e. sometimes writes are not allowed) but this allows all kinds of devices to participate in the web of data.</p>
+              <p>The following WoD Layers are under development. See the individual project pages for status and information.</p>
+              <ul>
+                <li><a href="https://github.com/webofdata/wod-database-layer">Relational Database WoD Layer</a> - Exposes a SQL Server, Oracle, PostgresQL database via the WoD protocol.</li>
+                <li><a href="https://github.com/webofdata/wod-cosmosdb-layer">CosmosDB WoD Layer</a> - Exposes CosmosDb database via the WoD protocol.</li>
+                <li><a href="">MongoDB WoD Layer</a> - Exposes MongoDb database via the WoD protocol.</li>
+                <li><a href="">SPARQL 1.1 WoD Layer</a> - Exposes a SQL Server database via the WoD protocol.</li -->
+                <li><a href="">Linked Data Platform WoD Layer</a> - Exposes an LDP endpoint via the WoD protocol.</li -->
+              </ul> 
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="row">        
+          <div class="col-lg-12">
+            <div class="p-5">
+              <h2 class="display-4">WoD Starter Templates</h2>
+              <p>Looking to create your own service implementation? The swagger definition can be used to generate a service interface or you can use one of the readily available service templates. These templates for common languages implement the core service and leave just the stubs to be implemented.</p>
+              <!-- p>The following WoD starter templates are available. See the individual project pages for how to clone them and make your own WoD service.</p -->
+              <!-- ul>
+                <li><a href="">Dotnet WoD Service Template</a> - A service template written in c#.</li>
+                <li><a href="">Java WoD Service Template</a> - A service template written in Java.</li>
+                <li><a href="">Python WoD Service Template</a> - A service template written in Python.</li>
+                <li><a href="">Go WoD Service Template</a> - A service template written in Go.</li>
+                <li><a href="">Node JS WoD Service Template</a> - A service template written in Node JS.</li>
+              </ul --> 
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-5 bg-black">
+      <div class="container">
+        <p class="m-0 text-center text-white small">
+        	<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.        	
+        </p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  </body>
+
+</html>
